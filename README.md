@@ -30,6 +30,7 @@ Get as far as you can in 3-4 hours Front-End-Only
 - Once complete submit a pull request 
 OR 
 - Fork the Repo     
+- Make an initial commit to mark your start time
 - Once complete submit a pull request 
 
 
