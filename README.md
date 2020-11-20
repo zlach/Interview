@@ -27,7 +27,7 @@ Get as far as you can in 3-4 hours Front-End-Only
  - Clone the repository on to your local machine
  - Create a new branch 
  - Push that branch up and make an initial commit to mark your start time
- - Once complete Submit a pull request 
+ - Once complete submit a pull request 
 
 
 
