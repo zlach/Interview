@@ -28,7 +28,7 @@ Get as far as you can in 3-4 hours Front-End-Only
 - Create a new branch 
 - Push that branch up and make an initial commit to mark your start time
 - Once complete submit a pull request 
-OR 
+**OR** 
 - Fork the Repo     
 - Make an initial commit to mark your start time
 - Once complete submit a pull request 
