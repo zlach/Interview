@@ -4,7 +4,7 @@ Get as far as you can in 3-4 hours Front-End-Only
 
 ### Requirements
 - Match the UI/UX Design 
-- For States in the state dropdown just include 2 or 3 state values not all 50 same for property types
+- For States in the state dropdown just include 3 state values not all 50. Same for property types 3 is sufficient
 - MultiStep Form Modal
 - When A User Opens the modal it is always the same first time view and state
 - When a User attempts to proceed to next step without required fields there are error messages (Form Validation)
