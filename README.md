@@ -17,7 +17,7 @@ Get as far as you can in 3-4 hours Front-End-Only
 
 **Mock API CALLS WITH PROMISES:** For saving the data from modal, updating your tableData, and getting the inital data create functions in their own module that each return a promise.
 - This way you can await them in your React Components when the component mounts or when you are submitting a form and saving
-- Use settimeout with your promises so that we can see how you manage loading state give them a good wait period to demo spinners etc
+- Use setTimeout with your promises so that we can see how you manage loading state give them a good wait period to demo spinners etc
 
 ### Stretch Goals 
 - Unit tests with Jest and React Testing Library (** Bonus Points)
