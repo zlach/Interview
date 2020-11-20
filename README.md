@@ -15,7 +15,7 @@ Get as far as you can in 3-4 hours Front-End-Only
 - console.log the data object with all of the key value pairs that you will be sending along to a mock API call
 - await that mock API call which should return a promise then console.log your response
 
-**Mock API CALLS WITH PROMISES:** For saving the data from modal, updating your tableData, and getting the inital data create functions in their own module that each return a promise.
+**Mock API CALLS WITH PROMISES:** For saving the data from modal, updating your tableData, and getting the initial data create functions in their own module that each return a promise.
 - This way you can await them in your React Components when the component mounts or when you are submitting a form and saving
 - Use setTimeout with your promises so that we can see how you manage loading state give them a good wait period to demo spinners etc
 
