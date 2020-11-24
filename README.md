@@ -1,9 +1,9 @@
-## Take Home Challenge 
+## Take Home Challenge
 
 Get as far as you can in 3-4 hours Front-End-Only
 
 ### Requirements
-- Match the UI/UX Design 
+- Match the UI/UX Design
 - For states in the state dropdown just include 3 state values not all 50. Same for property types 3 is sufficient
 - MultiStep Form Modal
 - When A User Opens the modal it is always the same first time view and state
@@ -19,21 +19,21 @@ Get as far as you can in 3-4 hours Front-End-Only
 - This way you can await them in your React Components when the component mounts or when you are submitting a form and saving
 - Use setTimeout with your promises so that we can see how you manage loading state give them a good wait period to demo spinners etc
 
-### Stretch Goals 
+### Stretch Goals
 - Unit tests with Jest and React Testing Library (** Bonus Points)
 - Table displaying content as you add
 
-### Instructions 
+### Instructions
 - Clone the repository on to your local machine
-- Create a new branch 
+- Create a new branch
 - Push that branch up and make an initial commit to mark your start time
 - Once complete submit a pull request
 
-**OR** 
+**OR**
 
-- Fork the Repo     
+- Fork the Repo
 - Make an initial commit to mark your start time
-- Once complete submit a pull request 
+- Once complete submit a pull request into the 1A branch
 
 
 
