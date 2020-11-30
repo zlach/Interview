@@ -24,13 +24,6 @@ Get as far as you can in 3-4 hours Front-End-Only
 - Table displaying content as you add
 
 ### Instructions
-- Clone the repository on to your local machine
-- Create a new branch
-- Push that branch up and make an initial commit to mark your start time
-- Once complete submit a pull request into the 1A branch
-
-**OR**
-
 - Fork the Repo
 - Make an initial commit to mark your start time
 - Once complete submit a pull request into the 1A branch
