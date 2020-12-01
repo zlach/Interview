@@ -26,7 +26,7 @@ Get as far as you can in 3-4 hours Front-End-Only
 ### Instructions
 - Fork the Repo
 - Make an initial commit to mark your start time
-- Once complete submit a pull request into the 1A branch
+- Once complete submit a pull request into the 1B branch
 
 
 
