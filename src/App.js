@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import './App.css';
-import Table from './components/pages/Table';
+import PropertyTable from './components/pages/PropertyTable';
 import Person from './components/icons/Person';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Navbar} from 'reactstrap';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Navbar className="custom-navbar">
         <Person/>
       </Navbar>
-      <Table />
+      <PropertyTable />
     </Fragment>
   );
 }

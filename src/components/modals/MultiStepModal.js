@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Spinner, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import FirstStep from '../modals/steps/FirstStep';
 import SecondStep from '../modals/steps/SecondStep';
+import { postProperty } from '../../services/api';
 
 
 const MultiStepModal = (props) => {
+    const [spinner, setSpinner] = useState(false);
     const [formData, setFormData] = useState({
         propertyType: '',
         propertyNickname: '',
@@ -24,8 +26,17 @@ const MultiStepModal = (props) => {
         setFormData({ ...formData, [name]: value });
     }
 
+    const saveAndClose = async () => {
+        setSpinner(true);
+        let property = JSON.stringify({ ...formData });
+        let response = await postProperty(property);
+        setSpinner(false);
+        props.addProperty(response);
+        props.toggle();
+    }
+
     return (
-        <div>
+        <div style={{ position: 'relative' }}>
             <Modal isOpen={props.isOpen} toggle={props.toggle} backdrop={false}>
                 <ModalHeader toggle={props.toggle}>{stepCount === 1 ? 'Add Property' : 'Add Property Details'}</ModalHeader>
                 <ModalBody>
@@ -44,13 +55,18 @@ const MultiStepModal = (props) => {
                     <SecondStep
                         step={stepCount}
                         previousStep={() => setStepCount(1)}
+                        saveAndClose={saveAndClose}
                         inputHandler={handleInputField}
                         floorsValue={formData.floors}
                         bedroomsValue={formData.bedrooms}
                         bathsValue={formData.baths}
                     />
                 </ModalBody>
+                {spinner ? <div className="spinner-overlay d-flex align-items-center justify-content-center">
+                    <Spinner color="white" />
+                </div> : null}
             </Modal>
+
         </div>
     );
 }

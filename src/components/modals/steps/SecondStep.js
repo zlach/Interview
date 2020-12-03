@@ -22,7 +22,7 @@ const SecondStep = (props) => {
             </Form>
             <div className="d-flex justify-content-center w-100">
                 <Button className='mr-2 w-50' color="primary" onClick={props.previousStep}>Previous</Button>
-                <Button className='ml-2 w-50' color="primary" onClick={null}>Save and Close</Button>
+                <Button className='ml-2 w-50' color="primary" onClick={props.saveAndClose}>Save and Close</Button>
             </div>
             <div className="d-flex justify-content-center w-100 mt-3">
                 <div className="progress-inactive mr-1"></div>
