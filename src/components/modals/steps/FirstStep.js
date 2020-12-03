@@ -30,7 +30,7 @@ const FirstStep = (props) => {
     }
     return (
         <div>
-            <Form>
+            <Form className="w-75">
                 <FormGroup>
                     <Label for="propertyType">Property Type</Label>
                     <Input type="select" name="propertyType" id="propertyType" onChange={props.inputHandler} value={props.propertyTypeValue}>

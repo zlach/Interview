@@ -1,4 +1,5 @@
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import Info from '../../icons/Info';
 
 const SecondStep = (props) => {
     if (props.step !== 2) {
@@ -16,7 +17,7 @@ const SecondStep = (props) => {
                     <Input type="number" name="bedrooms" id="bedrooms" onChange={props.inputHandler} value={props.bedroomsValue} />
                 </FormGroup>
                 <FormGroup>
-                    <Label for="baths">Baths - optional</Label> {/*todo: add icon*/}
+                    <Label for="baths">Baths - optional <Info/></Label>
                     <Input type="number" name="baths" id="baths" onChange={props.inputHandler} value={props.bathsValue} />
                 </FormGroup>
             </Form>
