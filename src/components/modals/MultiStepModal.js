@@ -8,12 +8,12 @@ import { postProperty } from '../../services/api';
 const MultiStepModal = (props) => {
     const [spinner, setSpinner] = useState(false);
     const [formData, setFormData] = useState({
-        propertyType: '',
+        propertyType: 'Single Family House',
         propertyNickname: '',
         streetAddress1: '',
         streetAddress2: '',
         city: '',
-        state: '',
+        state: 'DC',
         zipCode: '',
         floors: '',
         bedrooms: '',

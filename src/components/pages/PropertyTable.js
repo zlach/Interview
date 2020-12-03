@@ -12,7 +12,7 @@ const PropertyTable = () => {
 
     return (
         <Container>
-            <Row>
+            <Row className="my-5">
                 <h2 className="d-inline">My Properties</h2>
                 <Button className="d-inline text-uppercase ml-3" color="primary" onClick={() => setModal(!modal)}>Add Property</Button>
                 {modal ? <MultiStepModal isOpen={modal} toggle={() => setModal(!modal)} addProperty={addProperty} /> : null}
