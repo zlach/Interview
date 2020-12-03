@@ -45,7 +45,7 @@ const FirstStep = (props) => {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label for="zipCode">Zip Code</Label>
+                    <Label for="zipCode">Zip Code</Label> {/*todo: remove arrows from input*/}
                     <Input type="number" name="zipCode" id="zipCode" placeholder="Zip" onChange={props.inputHandler} value={props.zipCodeValue} />
                 </FormGroup>
             </Form>

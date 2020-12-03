@@ -12,12 +12,14 @@ const MultiStepModal = (props) => {
         streetAddress2: '',
         city: '',
         state: '',
-        zipCode: ''
-
+        zipCode: '',
+        floors: '',
+        bedrooms: '',
+        baths: ''
     });
     const [stepCount, setStepCount] = useState(1);
 
-    const handleTextField = (event) => {
+    const handleInputField = (event) => {
         const { name, value } = event.target;
         setFormData({ ...formData, [name]: value });
     }
@@ -29,7 +31,7 @@ const MultiStepModal = (props) => {
                 <ModalBody>
                     <FirstStep
                         step={stepCount}
-                        inputHandler={handleTextField}
+                        inputHandler={handleInputField}
                         propertyTypeValue={formData.propertyType}
                         propertyNicknameValue={formData.propertyNickname}
                         streetAddress1Value={formData.streetAddress1}
@@ -38,9 +40,13 @@ const MultiStepModal = (props) => {
                         stateValue={formData.state}
                         zipCodeValue={formData.zipCode}
                     />
-                    <SecondStep>
-
-                    </SecondStep>
+                    <SecondStep
+                        step={stepCount}
+                        inputHandler={handleInputField}
+                        floorsValue={formData.floors}
+                        bedroomsValue={formData.bedrooms}
+                        bathsValue={formData.baths}
+                    />
                 </ModalBody>
                 <ModalFooter>
                     {
@@ -51,7 +57,7 @@ const MultiStepModal = (props) => {
                                 <Button color="primary" onClick={null}>Save and Close</Button>
                             </>
                     }
-                </ModalFooter>
+                </ModalFooter> {/*todo: fix button widths, remove dividers add progress indicator*/}
             </Modal>
         </div>
     );

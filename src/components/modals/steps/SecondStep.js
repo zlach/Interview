@@ -6,6 +6,20 @@ const SecondStep = (props) => {
     }
     return (
         <div>
+            <Form className='d-flex'>
+                <FormGroup>
+                    <Label for="floors">Floors - optional</Label>
+                    <Input type="number" name="floors" id="floors" onChange={props.inputHandler} value={props.floorsValue} />
+                </FormGroup>
+                <FormGroup className='px-2'>
+                    <Label for="bedrooms">Bedrooms - optional</Label>
+                    <Input type="number" name="bedrooms" id="bedrooms" onChange={props.inputHandler} value={props.bedroomsValue} />
+                </FormGroup>
+                <FormGroup>
+                    <Label for="baths">Baths - optional</Label> {/*todo: add icon*/}
+                    <Input type="number" name="baths" id="baths" onChange={props.inputHandler} value={props.bathsValue} />
+                </FormGroup>
+            </Form>
         </div>
     )
 }
