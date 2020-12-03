@@ -20,6 +20,14 @@ const SecondStep = (props) => {
                     <Input type="number" name="baths" id="baths" onChange={props.inputHandler} value={props.bathsValue} />
                 </FormGroup>
             </Form>
+            <div className="d-flex justify-content-center w-100">
+                <Button className='mr-2 w-50' color="primary" onClick={props.previousStep}>Previous</Button>
+                <Button className='ml-2 w-50' color="primary" onClick={null}>Save and Close</Button>
+            </div>
+            <div className="d-flex justify-content-center w-100 mt-3">
+                <div className="progress-inactive mr-1"></div>
+                <div className="progress-active ml-1"></div>
+            </div>
         </div>
     )
 }

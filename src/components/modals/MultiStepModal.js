@@ -31,6 +31,7 @@ const MultiStepModal = (props) => {
                 <ModalBody>
                     <FirstStep
                         step={stepCount}
+                        nextStep={() => setStepCount(2)}
                         inputHandler={handleInputField}
                         propertyTypeValue={formData.propertyType}
                         propertyNicknameValue={formData.propertyNickname}
@@ -42,22 +43,13 @@ const MultiStepModal = (props) => {
                     />
                     <SecondStep
                         step={stepCount}
+                        previousStep={() => setStepCount(1)}
                         inputHandler={handleInputField}
                         floorsValue={formData.floors}
                         bedroomsValue={formData.bedrooms}
                         bathsValue={formData.baths}
                     />
                 </ModalBody>
-                <ModalFooter>
-                    {
-                        stepCount === 1 ?
-                            <Button color="primary" onClick={() => setStepCount(2)}>Next</Button> :
-                            <>
-                                <Button color="primary" onClick={() => setStepCount(1)}>Previous</Button>
-                                <Button color="primary" onClick={null}>Save and Close</Button>
-                            </>
-                    }
-                </ModalFooter> {/*todo: fix button widths, remove dividers add progress indicator*/}
             </Modal>
         </div>
     );

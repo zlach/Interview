@@ -1,6 +1,30 @@
+import { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 const FirstStep = (props) => {
+
+    const [alerts, setAlerts] = useState({
+        streetAddress1: '',
+        city: '',
+        zipCode: ''
+    });
+
+    const clearAlert = (e) => {
+        setAlerts({ ...alerts, [e.target.name]: '' })
+    }
+
+    const handleNext = () => {
+        if (props.streetAddress1Value && props.cityValue && props.zipCodeValue) {
+            props.nextStep();
+        } else if (!props.streetAddress1Value) {
+            setAlerts({ ...alerts, streetAddress1: 'is-invalid' })
+        } else if (!props.cityValue) {
+            setAlerts({ ...alerts, city: 'is-invalid' })
+        } else if (!props.zipCodeValue) {
+            setAlerts({ ...alerts, zipCode: 'is-invalid' })
+        }
+    }
+
     if (props.step !== 1) {
         return null;
     }
@@ -24,7 +48,10 @@ const FirstStep = (props) => {
                 </FormGroup>
                 <FormGroup>
                     <Label for="streetAddress1">Street Address</Label>
-                    <Input type="text" name="streetAddress1" id="streetAddress1" placeholder="Address 1" onChange={props.inputHandler} value={props.streetAddress1Value} />
+                    <Input className={alerts.streetAddress1} type="text" name="streetAddress1" id="streetAddress1" placeholder="Address 1" onChange={(e) => { props.inputHandler(e); clearAlert(e) }} value={props.streetAddress1Value} />
+                    <div className="invalid-feedback">
+                        Please Enter Address
+                    </div>
                 </FormGroup>
                 <FormGroup>
                     <Label for="streetAddress2">Street Address Cont.</Label>
@@ -34,7 +61,10 @@ const FirstStep = (props) => {
             <Form className='d-flex'>
                 <FormGroup>
                     <Label for="city">City</Label>
-                    <Input type="text" name="city" id="city" placeholder="City" onChange={props.inputHandler} value={props.cityValue} />
+                    <Input className={alerts.city} type="text" name="city" id="city" placeholder="City" onChange={(e) => { props.inputHandler(e); clearAlert(e) }} value={props.cityValue} />
+                    <div className="invalid-feedback">
+                        Please Enter City
+                    </div>
                 </FormGroup>
                 <FormGroup className='px-2'>
                     <Label for="state">State</Label>
@@ -46,9 +76,17 @@ const FirstStep = (props) => {
                 </FormGroup>
                 <FormGroup>
                     <Label for="zipCode">Zip Code</Label> {/*todo: remove arrows from input*/}
-                    <Input type="number" name="zipCode" id="zipCode" placeholder="Zip" onChange={props.inputHandler} value={props.zipCodeValue} />
+                    <Input className={alerts.zipCode} type="number" name="zipCode" id="zipCode" placeholder="Zip" onChange={(e) => { props.inputHandler(e); clearAlert(e) }} value={props.zipCodeValue} />
+                    <div className="invalid-feedback">
+                        Please Enter Zip
+                    </div>
                 </FormGroup>
             </Form>
+            <Button className='w-100' color="primary" onClick={handleNext}>Next</Button>
+            <div className="d-flex justify-content-center w-100 mt-3">
+                <div className="progress-active mr-1"></div>
+                <div className="progress-inactive ml-1"></div>
+            </div>
         </div>
     )
 }

@@ -7,3 +7,16 @@
   height: 35px;
   width: 35px;
 }
+
+.progress-active{
+  width: 15px;
+  height: 15px;
+  border-radius:50%;
+  background-color: #c7c7c7;
+}
+.progress-inactive{
+  width: 15px;
+  height: 15px;
+  border-radius:50%;
+  background-color: #e4e4e4;
+}
